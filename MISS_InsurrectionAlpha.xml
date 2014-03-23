@@ -1,0 +1,251 @@
+<mission_data version="1.7" background_id_arme="">
+  <start name_arme="Start">
+    <create type="player" x="48402.0" y="0.0" z="90000.0" angle="0" name="Artemis" />
+    <set_difficulty_level value="5" />
+    <set_skybox_index index="1" />
+    <big_message title="Insurrection Alpha v1.0" subtitle1="by Ramon Yvarra - U.S.S. Loma Prieta" subtitle2="adventure for Artemis 2.0" />
+    <set_timer name="start_mission_timer_1" seconds="2700" />
+    <create count="2000" type="nebulas" startX="48402.0" startY="0.0" startZ="46513.0" radius="14000" randomRange="20000" randomSeed="1000" />
+    <set_variable name="chapter_1" value="1" />
+    <create type="station" x="48402.0" y="0.0" z="91694.0" angle="0" name="Deep Space 5" raceKeys="TSN friendly" hullKeys="base Base" />
+    <create type="enemy" x="74698.0" y="0.0" z="64092.0" angle="0" name="KSE1" raceKeys="Kralien enemy loner" hullKeys="fighter Scout" fleetnumber="1" />
+    <set_variable name="entered30000" value="0" />
+    <set_variable name="entered29000" value="0" />
+    <set_variable name="entered28000" value="0" />
+    <set_variable name="entered27000" value="0" />
+    <set_variable name="entered26000" value="0" />
+    <set_variable name="entered25000" value="0" />
+    <set_variable name="entered24000" value="0" />
+    <set_variable name="entered23000" value="0" />
+    <set_variable name="entered22000" value="0" />
+    <set_variable name="entered21000" value="0" />
+    <set_variable name="entered20000" value="0" />
+    <set_variable name="entered19000" value="0" />
+    <set_variable name="entered18000" value="0" />
+    <set_variable name="entered17000" value="0" />
+    <set_variable name="entered16000" value="0" />
+    <set_variable name="entered15000" value="0" />
+    <set_variable name="entered14000" value="0" />
+    <set_variable name="entered13000" value="0" />
+    <set_variable name="entered12000" value="0" />
+    <set_variable name="entered11000" value="0" />
+    <set_variable name="entered10000" value="0" />
+    <set_variable name="entered9000" value="0" />
+    <set_variable name="entered8000" value="0" />
+    <set_variable name="entered7000" value="0" />
+    <set_variable name="entered6000" value="0" />
+    <set_variable name="entered5000" value="0" />
+    <set_variable name="entered4000" value="0" />
+  </start>
+  <folder_arme name_arme="EnterNebula" id_arme="30a47ade-c520-46be-9e16-6cde63b66afc" expanded_arme="" />
+  <event name_arme="30000-Heavy Static" id_arme="dd622272-1d2d-487e-a148-3b02598eab53" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered30000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="30000" />
+    <set_variable name="entered30000" value="1" />
+    <incoming_comms_text from="s*S4bTe3TgNl er1el">This is !K*** in1s Bahrns Tii sep7gVoaaoie TSN h** n eospa!Sh**3am nsb Kralien lle1h4iin Come in!</incoming_comms_text>
+    <set_object_property property="topSpeed" value="1.0" name="Artemis" />
+  </event>
+  <event name_arme="29000" id_arme="19b19419-35a7-4c57-b0da-4473d911eb09" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered29000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="29000" />
+    <set_variable name="entered29000" value="1" />
+    <incoming_comms_text from="!0m4 f1la4e5**$%g">Damnit es hsnh naunurettni an unsecured channel!</incoming_comms_text>
+  </event>
+  <event name_arme="28000" id_arme="081b3230-db81-4d27-a0fd-0ae1a88fde06" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered28000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="28000" />
+    <set_variable name="entered28000" value="1" />
+    <incoming_comms_text from="T*STegNl ereg">1^! parnoid eo neenVc  omnei' oernts*@#%ttn impossible fs1r*#@^&amp;Dtnssd transmissions isb,il  escape o21 56bras invisible to sensors.</incoming_comms_text>
+  </event>
+  <event name_arme="27000" id_arme="48bc2e38-2fcb-4dbb-97a9-0a061bdd457e" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered27000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="27000" />
+    <set_variable name="entered27000" value="1" />
+    <incoming_comms_text from="Km4 f1la4e5**$car">All u, ea!^&amp;#(Ast eh positioned te5&amp;*fnoo scout hlgi'b  edge  ipsaoeeeI nebula</incoming_comms_text>
+  </event>
+  <event name_arme="26000" id_arme="88ab33c5-5560-4964-80b5-f684d918eadd" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered26000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="26000" />
+    <set_variable name="entered26000" value="1" />
+    <incoming_comms_text from="TSTe gNlberg">Plan$a4 mro aipi motion hpo lli662dtesTale ships $!6e in place?</incoming_comms_text>
+  </event>
+  <event name_arme="25000" id_arme="ca1a7cb7-7795-40c0-aeb0-7c698ba7ca3d" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered25000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="25000" />
+    <set_variable name="entered25000" value="1" />
+    <incoming_comms_text from="KS4 f1la4Hae5**$car">igCnoiy awaiting t5&amp; final rbn t Fdrt cross fasytoy ConFed Twcnrofro1% tory</incoming_comms_text>
+  </event>
+  <event name_arme="24000-Pause" id_arme="4932eb8b-9a61-491e-967d-c190210c3223" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered24000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="24000" />
+    <set_variable name="entered24000" value="1" />
+  </event>
+  <event name_arme="23000" id_arme="e27d1284-3b8d-4226-96a0-011bf72a7297" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered23000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="23000" />
+    <set_variable name="entered23000" value="1" />
+  </event>
+  <event name_arme="22000" id_arme="2f91a547-28d3-409a-b7fe-423ca7f9f9ad" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered22000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="22000" />
+    <set_variable name="entered22000" value="1" />
+  </event>
+  <event name_arme="21000" id_arme="b15836b3-a182-4606-921c-77c05f3a81c4" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered21000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="21000" />
+    <set_variable name="entered21000" value="1" />
+  </event>
+  <event name_arme="20000-Medium Static" id_arme="2d206c5a-6313-40b6-83de-47d34f8dbd27" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered20000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="20000" />
+    <set_variable name="entered20000" value="1" />
+    <incoming_comms_text from="TSN g5#Nlberg">There's no de%12`hseo back now Vorthan! nauws@1!ceu  must proceed  w%^1otnh67t the plan. ^!!111tera Deep Space  @^copt5ny be destroyed!  khhTerS sector ea5ge without rhtrWn!tc destruction aae%1wt  hhnTo your fleet neoa poeve chance to tmhe! inmreta this sector.</incoming_comms_text>
+  </event>
+  <event name_arme="19000" id_arme="3d9d91fc-70e1-430d-8d74-0289c360ca7a" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered19000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="19000" />
+    <set_variable name="entered19000" value="1" />
+    <incoming_comms_text from="KSE f1la4ilcar">rd igise fulfilled our end ps$ix4ee Terran! lr%hf5eeo fleet is ready. ba45sa must transmit oef!dn5d prefix codes nmtnl Space df*(^t'f Five's shields.^</incoming_comms_text>
+  </event>
+  <event name_arme="18000" id_arme="20c451f2-2cd3-4b62-b012-226e72822f8e" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered18000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="18000" />
+    <set_variable name="entered18000" value="1" />
+    <incoming_comms_text from="TSN T5#!slberg">Not s41! fast Vorthan! ^ae44d get the codes Nncn*#sd you've paid fu%21teoy what eY&amp;11'ylh promised.</incoming_comms_text>
+  </event>
+  <event name_arme="17000-Pause" id_arme="0cc71f9f-e828-46ec-9418-4b9f8fc9267f" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered17000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="17000" />
+    <set_variable name="entered17000" value="1" />
+  </event>
+  <event name_arme="16000" id_arme="47e4cf53-cf77-4b23-8eaa-73e3905bb444" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered16000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="16000" />
+    <set_variable name="entered16000" value="1" />
+  </event>
+  <event name_arme="15000" id_arme="72eaae1c-57a3-4279-a40b-85cc9da7da07" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered15000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="15000" />
+    <set_variable name="entered15000" value="1" />
+  </event>
+  <event name_arme="14000" id_arme="6b075ae1-c924-4c5b-a2ac-5ae7f5a5cde8" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered14000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="14000" />
+    <set_variable name="entered14000" value="1" />
+  </event>
+  <event name_arme="13000" id_arme="faa853dd-29f1-4136-a19f-57f0e16261cd" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered13000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="13000" />
+    <set_variable name="entered13000" value="1" />
+  </event>
+  <event name_arme="12000-Light Static" id_arme="4d48ae27-3687-4d97-9c13-962ea8b8d323" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered12000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="12000" />
+    <set_variable name="entered12000" value="1" />
+    <incoming_comms_text from="KSE Ha$4ilcar">The final payment has been mjl%2 Terran. Give $#n the codes! jlk^15 Before we #56ja4 our patience!^</incoming_comms_text>
+  </event>
+  <event name_arme="11000" id_arme="4595ad95-7ac9-43f6-be95-8f135a3e64ad" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered11000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="11000" />
+    <set_variable name="entered11000" value="1" />
+    <incoming_comms_text from="TSN T5#Kesberg">It's a pleasure doing b$681j!a with you Vorthan. The prefix codes jkl5!3 Deep Space 5 are kl^22 transmitted.</incoming_comms_text>
+  </event>
+  <event name_arme="10000" id_arme="dbbac082-2f85-4b6f-ac71-baf36cbb13ba" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered10000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="10000" />
+    <set_variable name="entered10000" value="1" />
+    <incoming_comms_text from="TSN T5#lesberg">Deep Space Five's Jkl6@$ Codes are PF-DS5-4B762-45</incoming_comms_text>
+  </event>
+  <event name_arme="9000-Pause" id_arme="ea53c2da-3d7d-4c51-989b-8555236bab75" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered9000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="9000" />
+    <set_variable name="entered9000" value="1" />
+  </event>
+  <event name_arme="8000" id_arme="390737a3-628f-4a78-b738-11de2d48319c" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered8000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="8000" />
+    <set_variable name="entered8000" value="1" />
+  </event>
+  <event name_arme="7000" id_arme="73e3d19e-4daa-4de6-8e98-0eb3db7dd612" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered7000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="7000" />
+    <set_variable name="entered7000" value="1" />
+    <incoming_comms_text from="KSE Hamilcar">I'm picking up a ship on sensors! Damnit Bahrns you set me up!</incoming_comms_text>
+    <incoming_comms_text from="TSN Tellesberg">No! This wasn't my doing! You have to belive me.</incoming_comms_text>
+  </event>
+  <event name_arme="6000" id_arme="8d8a6b64-0ea0-464a-8b60-c7bb5cf6f074" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered6000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="6000" />
+    <set_variable name="entered6000" value="1" />
+    <incoming_comms_text from="TSN Tellesberg">TSN Vessel Artemis, disengage and return to base! You're entering a restricted area. Reverse course AT ONCE!</incoming_comms_text>
+  </event>
+  <event name_arme="5000" id_arme="31fb1974-8a68-4ec0-a988-fce0ea68bf30" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered5000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="5000" />
+    <set_variable name="entered5000" value="1" />
+    <create type="neutral" x="48402.0" y="0.0" z="46513.0" angle="0.0" name="TSN Tellesberg" raceKeys="TSN friendly" hullKeys="Battleship" />
+    <create type="neutral" x="48402.0" y="0.0" z="46013.0" angle="0.0" name="KSE Hamilcar" raceKeys="Kralien support" hullKeys="Dreadnought large carrier" />
+    <set_object_property property="throttle" value="0.0" name="KSE Hamilcar" />
+    <set_object_property property="throttle" value="0.0" name="TSN Tellesberg" />
+    <set_variable name="HamilcarIsEnemy" value="0.0" />
+  </event>
+  <event name_arme="4000" id_arme="6e2f9cc2-a6e1-47fa-a5f6-2608b121b46c" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
+    <if_variable name="entered4000" comparator="EQUALS" value="0" />
+    <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="4000" />
+    <set_variable name="entered4000" value="1" />
+    <incoming_comms_text from="KSE Hamilcar">It's too late! We have to destroy them before they alert Deep Space Five and they change their prefix codes. This mission is too important!</incoming_comms_text>
+    <incoming_comms_text from="TSN Tellesberg">It can't be known that we were here. Destroy them!</incoming_comms_text>
+    <destroy name="KSE Hamilcar" />
+    <create type="enemy" x="48402.0" y="0.0" z="46013.0" angle="0.0" name="KSE Hamilcar" raceKeys="Kralien support" hullKeys="Dreadnought" fleetnumber="1" />
+    <set_variable name="HamilcarIsEnemy" value="1.0" />
+    <set_object_property property="shieldStateBack" value="1000" name="KSE Hamilcar" />
+    <set_object_property property="shieldStateFront" value="1000" name="KSE Hamilcar" />
+    <set_object_property property="topSpeed" value="750.0" name="TSN Tellesberg" />
+    <set_object_property property="topSpeed" value="1500.0" name="KSE Hamilcar" />
+    <set_object_property property="shieldsOn" value="1" name="TSN Tellesberg" />
+    <set_object_property property="shieldsOn" value="1" name="KSE Hamilcar" />
+    <set_object_property property="eliteAbilityBits" value="48" name="KSE Hamilcar" />
+    <add_ai type="LAUNCH_FIGHTERS" value1="4000" name="KSE Hamilcar" />
+    <add_ai type="CHASE_PLAYER" name="KSE Hamilcar" />
+    <add_ai type="PROCEED_TO_EXIT" name="TSN Tellesberg" />
+  </event>
+  <folder_arme name_arme="LeaveNebula" id_arme="5ae67e03-3f0a-4b6b-bbce-7b7e77378899" expanded_arme="" />
+  <event name_arme="Followed Orders" id_arme="680e1203-1dde-4dfe-92a1-20052e0aa426" parent_id_arme="5ae67e03-3f0a-4b6b-bbce-7b7e77378899">
+    <if_outside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="29000" />
+    <if_variable name="entered5000" comparator="EQUALS" value="0.0" />
+    <if_variable name="entered20000" comparator="EQUALS" value="1.0" />
+    <if_variable name="HamilcarIsEnemy" comparator="EQUALS" value="0.0" />
+    <if_variable name="enemyFleetCreated" comparator="EQUALS" value="0.0" />
+    <create type="enemy" x="0.0" y="0.0" z="0.0" angle="0.0" name="KSE2" raceKeys="Kralien enemy" hullKeys="Missile Cruiser" fleetnumber="2" />
+    <create type="enemy" x="0.0" y="0.0" z="0.0" angle="0.0" name="KSE3" raceKeys="Kralien enemy" hullKeys="Destroyer medium" fleetnumber="2" />
+    <create type="enemy" x="0.0" y="0.0" z="0.0" angle="0.0" name="KSE4" raceKeys="Kralien enemy" hullKeys="Battleship large" fleetnumber="2" />
+    <set_relative_position name2="KSE2" distance="2000" angle="0.0" name1="Artemis" />
+    <set_relative_position name2="KSE3" distance="2000" angle="5.0" name1="Artemis" />
+    <set_relative_position name2="KSE4" distance="2000" angle="355.0" name1="Artemis" />
+    <set_variable name="enemyFleetCreated" value="1.0" />
+  </event>
+  <folder_arme name_arme="End Game Conditions" id_arme="0003a934-967b-414b-b483-0e137c88c397" expanded_arme="" />
+  <event name_arme="Docks with Station after prefix transmission" id_arme="2f109d20-1208-4f7d-870a-ecdfe1539fcb" parent_id_arme="0003a934-967b-414b-b483-0e137c88c397">
+    <if_docked name="Deep Space 5" />
+    <if_variable name="entered10000" comparator="EQUALS" value="1.0" />
+    <end_mission />
+  </event>
+  <event name_arme="Destroyed Hamilcar" id_arme="b66496db-88d9-4dd9-858a-cd141924cfa9" parent_id_arme="0003a934-967b-414b-b483-0e137c88c397">
+    <if_variable name="HamilcarIsEnemy" comparator="EQUALS" value="1.0" />
+    <if_not_exists name="KSE Hamilcar" />
+    <set_variable name="HamilcarIsDead" value="1.0" />
+  </event>
+  <event name_arme="Target Tellesberg" id_arme="586c0aaf-8ccb-46b6-a350-ac67e04c4d36" parent_id_arme="0003a934-967b-414b-b483-0e137c88c397">
+    <if_variable name="entered5000" comparator="EQUALS" value="1.0" />
+    <if_variable name="tellesbergTaunt" comparator="NOT" value="1.0" />
+    <if_player_is_targeting name="TSN Tellesberg" />
+    <add_ai type="ATTACK" targetName="Artemis" value1="750.0" name="TSN Tellesberg" />
+    <incoming_comms_text from="TSN Tellesberg">You dare target us? You'll pay for this!</incoming_comms_text>
+    <set_variable name="tellesbergTaunt" value="1.0" />
+  </event>
+  <folder_arme name_arme="Scout Ship Conditions" id_arme="3177be71-5697-44f1-a6c5-99faaa2a90c4" expanded_arme="" />
+  <event name_arme="Nears Scout" id_arme="6ad8995a-4dbf-4885-985f-3174d346014a" parent_id_arme="3177be71-5697-44f1-a6c5-99faaa2a90c4">
+    <if_distance name1="Artemis" name2="KSE1" comparator="EQUALS" value="8000.0" />
+    <add_ai type="POINT_THROTTLE" value1="48402.0" value2="0.0" value3="46513.0" value4="600.0" name="KSE1" />
+  </event>
+</mission_data>
