@@ -4,11 +4,18 @@
     <set_difficulty_level value="5" />
     <set_skybox_index index="1" />
     <big_message title="Insurrection Alpha v1.0" subtitle1="by Ramon Yvarra - U.S.S. Loma Prieta" subtitle2="adventure for Artemis 2.0" />
-    <set_timer name="start_mission_timer_1" seconds="2700" />
     <create count="2000" type="nebulas" startX="48402.0" startY="0.0" startZ="46513.0" radius="14000" randomRange="20000" randomSeed="1000" />
+    <set_timer name="start_mission_timer_1" seconds="2700" />
     <set_variable name="chapter_1" value="1" />
     <create type="station" x="48402.0" y="0.0" z="91694.0" angle="0" name="Deep Space 5" raceKeys="TSN friendly" hullKeys="base Base" />
-    <create type="enemy" x="74698.0" y="0.0" z="64092.0" angle="0" name="KSE1" raceKeys="Kralien enemy loner" hullKeys="fighter Scout" fleetnumber="1" />
+    <create type="enemy" x="61498.0" y="0.0" z="11500.0" angle="0" name="KSE1" raceKeys="Kralien enemy loner" hullKeys="Fighter fighter" fleetnumber="1" />
+    <create type="neutral" x="78418.0" y="0.0" z="71479.0" angle="0" name="TSN Dyson" hullID="1502" />
+    <create type="neutral" x="83938.0" y="0.0" z="38257.0" angle="0" name="TSN Bunson" hullID="1502" />
+    <set_object_property property="throttle" value="0.0" name="TSN Dyson" />
+    <set_object_property property="throttle" value="0.0" name="TSN Bunson" />
+    <add_ai type="DIR_THROTTLE" value1="90.0" value2="0.0" name="TSN Dyson" />
+    <add_ai type="DIR_THROTTLE" value1="90.0" value2="0.0" name="TSN Bunson" />
+    <add_ai type="DIR_THROTTLE" value1="180.0" value2="0.0" name="KSE1" />
     <set_variable name="entered30000" value="0" />
     <set_variable name="entered29000" value="0" />
     <set_variable name="entered28000" value="0" />
@@ -37,13 +44,19 @@
     <set_variable name="entered5000" value="0" />
     <set_variable name="entered4000" value="0" />
   </start>
+  <event name_arme="Start Mission" id_arme="c1ae7442-43c0-4730-b33c-c00ad3186c05">
+    <if_distance name1="Deep Space 5" name2="Artemis" comparator="LESS_EQUAL" value="4000.0" />
+    <if_variable name="startMission" comparator="EQUALS" value="0.0" />
+    <set_variable name="startMission" value="1.0" />
+    <incoming_comms_text from="Deep Space 5">Artemis, the science vessels Dyson and Bunson are studying the Tolan nebula and its unique properties. Your orders are to patrol the nebula's edge and rendezvous with the science vessels. Until we know more about the nebula's effects, your orders are to avoid entering it unless absolutely necessary.</incoming_comms_text>
+  </event>
   <folder_arme name_arme="EnterNebula" id_arme="30a47ade-c520-46be-9e16-6cde63b66afc" expanded_arme="" />
   <event name_arme="30000-Heavy Static" id_arme="dd622272-1d2d-487e-a148-3b02598eab53" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
     <if_variable name="entered30000" comparator="EQUALS" value="0" />
     <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="30000" />
     <set_variable name="entered30000" value="1" />
     <incoming_comms_text from="s*S4bTe3TgNl er1el">This is !K*** in1s Bahrns Tii sep7gVoaaoie TSN h** n eospa!Sh**3am nsb Kralien lle1h4iin Come in!</incoming_comms_text>
-    <set_object_property property="topSpeed" value="1.0" name="Artemis" />
+    <set_object_property property="topSpeed" value="0.2" name="Artemis" />
   </event>
   <event name_arme="29000" id_arme="19b19419-35a7-4c57-b0da-4473d911eb09" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
     <if_variable name="entered29000" comparator="EQUALS" value="0" />
@@ -171,7 +184,7 @@
     <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="7000" />
     <set_variable name="entered7000" value="1" />
     <incoming_comms_text from="KSE Hamilcar">I'm picking up a ship on sensors! Damnit Bahrns you set me up!</incoming_comms_text>
-    <incoming_comms_text from="TSN Tellesberg">No! This wasn't my doing! You have to belive me.</incoming_comms_text>
+    <incoming_comms_text from="TSN Tellesberg">No! This wasn't my doing! You have to believe me.</incoming_comms_text>
   </event>
   <event name_arme="6000" id_arme="8d8a6b64-0ea0-464a-8b60-c7bb5cf6f074" parent_id_arme="30a47ade-c520-46be-9e16-6cde63b66afc">
     <if_variable name="entered6000" comparator="EQUALS" value="0" />
@@ -183,7 +196,7 @@
     <if_variable name="entered5000" comparator="EQUALS" value="0" />
     <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="5000" />
     <set_variable name="entered5000" value="1" />
-    <create type="neutral" x="48402.0" y="0.0" z="46513.0" angle="0.0" name="TSN Tellesberg" raceKeys="TSN friendly" hullKeys="Battleship" />
+    <create type="neutral" x="48402.0" y="0.0" z="46513.0" angle="0.0" name="TSN Tellesberg" raceKeys="TSN friendly" hullKeys="Destroyer medium" />
     <create type="neutral" x="48402.0" y="0.0" z="46013.0" angle="0.0" name="KSE Hamilcar" raceKeys="Kralien support" hullKeys="Dreadnought large carrier" />
     <set_object_property property="throttle" value="0.0" name="KSE Hamilcar" />
     <set_object_property property="throttle" value="0.0" name="TSN Tellesberg" />
@@ -193,15 +206,15 @@
     <if_variable name="entered4000" comparator="EQUALS" value="0" />
     <if_inside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="4000" />
     <set_variable name="entered4000" value="1" />
-    <incoming_comms_text from="KSE Hamilcar">It's too late! We have to destroy them before they alert Deep Space Five and they change their prefix codes. This mission is too important!</incoming_comms_text>
-    <incoming_comms_text from="TSN Tellesberg">It can't be known that we were here. Destroy them!</incoming_comms_text>
+    <incoming_comms_text from="KSE Hamilcar">It's too late! We have to destroy them. This mission is too important!</incoming_comms_text>
+    <incoming_comms_text from="TSN Tellesberg">It can't be known that we were here. If they dock with Deep Space 5 those codes will be useless. I leave them to you Vorthan.</incoming_comms_text>
     <destroy name="KSE Hamilcar" />
     <create type="enemy" x="48402.0" y="0.0" z="46013.0" angle="0.0" name="KSE Hamilcar" raceKeys="Kralien support" hullKeys="Dreadnought" fleetnumber="1" />
     <set_variable name="HamilcarIsEnemy" value="1.0" />
     <set_object_property property="shieldStateBack" value="1000" name="KSE Hamilcar" />
     <set_object_property property="shieldStateFront" value="1000" name="KSE Hamilcar" />
-    <set_object_property property="topSpeed" value="750.0" name="TSN Tellesberg" />
-    <set_object_property property="topSpeed" value="1500.0" name="KSE Hamilcar" />
+    <set_object_property property="topSpeed" value="0.2" name="TSN Tellesberg" />
+    <set_object_property property="topSpeed" value="0.25" name="KSE Hamilcar" />
     <set_object_property property="shieldsOn" value="1" name="TSN Tellesberg" />
     <set_object_property property="shieldsOn" value="1" name="KSE Hamilcar" />
     <set_object_property property="eliteAbilityBits" value="48" name="KSE Hamilcar" />
@@ -210,7 +223,7 @@
     <add_ai type="PROCEED_TO_EXIT" name="TSN Tellesberg" />
   </event>
   <folder_arme name_arme="LeaveNebula" id_arme="5ae67e03-3f0a-4b6b-bbce-7b7e77378899" expanded_arme="" />
-  <event name_arme="Followed Orders" id_arme="680e1203-1dde-4dfe-92a1-20052e0aa426" parent_id_arme="5ae67e03-3f0a-4b6b-bbce-7b7e77378899">
+  <event name_arme="Followed Orders" id_arme="29dc712a-0c32-4ac1-8418-91742dae21f6" parent_id_arme="5ae67e03-3f0a-4b6b-bbce-7b7e77378899">
     <if_outside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="29000" />
     <if_variable name="entered5000" comparator="EQUALS" value="0.0" />
     <if_variable name="entered20000" comparator="EQUALS" value="1.0" />
@@ -223,6 +236,29 @@
     <set_relative_position name2="KSE3" distance="2000" angle="5.0" name1="Artemis" />
     <set_relative_position name2="KSE4" distance="2000" angle="355.0" name1="Artemis" />
     <set_variable name="enemyFleetCreated" value="1.0" />
+  </event>
+  <event name_arme="Destroyed Hamilcar" id_arme="680e1203-1dde-4dfe-92a1-20052e0aa426" parent_id_arme="5ae67e03-3f0a-4b6b-bbce-7b7e77378899">
+    <if_outside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="29000" />
+    <if_variable name="HamilcarIsDead" comparator="EQUALS" value="1.0" />
+    <if_variable name="enemyFleetCreated" comparator="EQUALS" value="0.0" />
+    <create type="enemy" x="43270.0" y="0.0" z="84081.0" angle="0" name="KRE Scimitar" raceKeys="Kralien enemy" hullKeys="Battleship medium" fleetnumber="2" />
+    <create type="enemy" x="41265.0" y="0.0" z="88233.0" angle="0" name="KRE Tiger" raceKeys="Kralien enemy" hullKeys="Battleship medium" fleetnumber="2" />
+    <create type="enemy" x="47709.0" y="0.0" z="84510.0" angle="0" name="KRE Sirius" raceKeys="Kralien enemy" hullKeys="Battleship medium" fleetnumber="2" />
+    <create type="neutral" x="41409.0" y="0.0" z="94821.0" angle="0" name="TSN Nike" raceKeys="TSN friendly" hullKeys="Destroyer medium warship" />
+    <create type="neutral" x="46850.0" y="0.0" z="95250.0" angle="0" name="TSN Madrigal" raceKeys="TSN friendly" hullKeys="Destroyer medium warship" />
+    <create type="neutral" x="54869.0" y="0.0" z="90238.0" angle="0" name="TSN Fearless" raceKeys="TSN friendly" hullKeys="Destroyer medium warship" />
+    <add_ai type="ATTACK" targetName="TSN Nike" value1="0.0" name="KRE Scimitar" />
+    <add_ai type="ATTACK" targetName="TSN Madrigal" value1="0.0" name="KRE Tiger" />
+    <add_ai type="ATTACK" targetName="TSN Fearless" value1="0.0" name="KRE Sirius" />
+    <add_ai type="ATTACK" targetName="KRE Scimitar" value1="0.0" name="TSN Nike" />
+    <add_ai type="ATTACK" targetName="KRE Tiger" value1="0.0" name="TSN Madrigal" />
+    <add_ai type="ATTACK" targetName="KRE Sirius" value1="0.0" name="TSN Fearless" />
+    <set_variable name="enemyFleetCreated" value="1.0" />
+    <incoming_comms_text from="TSN Fearless">Artemis? We thought you'd been destroyed. The Kraliens are attempting to take over this sector. We could really use some assistance.</incoming_comms_text>
+  </event>
+  <event name_arme="Reset Speed" id_arme="7937b750-5727-4021-b261-dbe5e1208679" parent_id_arme="5ae67e03-3f0a-4b6b-bbce-7b7e77378899">
+    <if_outside_sphere name="Artemis" centerX="48402.0" centerY="0.0" centerZ="46513.0" radius="30000" />
+    <set_object_property property="topSpeed" value="0.6" name="Artemis" />
   </event>
   <folder_arme name_arme="End Game Conditions" id_arme="0003a934-967b-414b-b483-0e137c88c397" expanded_arme="" />
   <event name_arme="Docks with Station after prefix transmission" id_arme="2f109d20-1208-4f7d-870a-ecdfe1539fcb" parent_id_arme="0003a934-967b-414b-b483-0e137c88c397">
@@ -239,13 +275,69 @@
     <if_variable name="entered5000" comparator="EQUALS" value="1.0" />
     <if_variable name="tellesbergTaunt" comparator="NOT" value="1.0" />
     <if_player_is_targeting name="TSN Tellesberg" />
-    <add_ai type="ATTACK" targetName="Artemis" value1="750.0" name="TSN Tellesberg" />
     <incoming_comms_text from="TSN Tellesberg">You dare target us? You'll pay for this!</incoming_comms_text>
     <set_variable name="tellesbergTaunt" value="1.0" />
+    <create type="enemy" x="0.0" y="0.0" z="0.0" angle="0.0" name="Tellesberg" raceKeys="enemy" hullKeys="Destroyer medium" />
+    <copy_object_property property="angle" name1="TSN Tellesberg" name2="Tellesberg" />
+    <copy_object_property property="throttle" name1="TSN Tellesberg" name2="Tellesberg" />
+    <copy_object_property property="topSpeed" name1="TSN Tellesberg" name2="Tellesberg" />
+    <copy_object_property property="shieldStateFront" name1="TSN Tellesberg" name2="Tellesberg" />
+    <copy_object_property property="shieldStateBack" name1="TSN Tellesberg" name2="Tellesberg" />
+    <copy_object_property property="shieldsOn" name1="TSN Tellesberg" name2="Tellesberg" />
+    <copy_object_property property="positionX" name1="TSN Tellesberg" name2="Tellesberg" />
+    <copy_object_property property="positionY" name1="TSN Tellesberg" name2="Tellesberg" />
+    <copy_object_property property="positionZ" name1="TSN Tellesberg" name2="Tellesberg" />
+    <destroy name="TSN Tellesberg" />
+    <add_ai type="ATTACK" targetName="Artemis" value1="0.7" name="Tellesberg" />
+  </event>
+  <event name_arme="Destroyed Enemy Fleet" id_arme="bf2edce4-7df2-4b23-90a1-c87377f26f6b" parent_id_arme="0003a934-967b-414b-b483-0e137c88c397">
+    <if_variable name="enemyFleetCreated" comparator="EQUALS" value="1.0" />
+    <if_not_exists name="KSE2" />
+    <if_not_exists name="KSE3" />
+    <if_not_exists name="KSE4" />
+    <if_not_exists name="KRE Scimitar" />
+    <if_not_exists name="KRE Tiger" />
+    <if_not_exists name="KRE Sirius" />
+    <end_mission />
   </event>
   <folder_arme name_arme="Scout Ship Conditions" id_arme="3177be71-5697-44f1-a6c5-99faaa2a90c4" expanded_arme="" />
   <event name_arme="Nears Scout" id_arme="6ad8995a-4dbf-4885-985f-3174d346014a" parent_id_arme="3177be71-5697-44f1-a6c5-99faaa2a90c4">
-    <if_distance name1="Artemis" name2="KSE1" comparator="EQUALS" value="8000.0" />
-    <add_ai type="POINT_THROTTLE" value1="48402.0" value2="0.0" value3="46513.0" value4="600.0" name="KSE1" />
+    <if_distance name1="Artemis" name2="KSE1" comparator="LESS_EQUAL" value="8000.0" />
+    <if_variable name="nearsScout" comparator="EQUALS" value="0.0" />
+    <add_ai type="POINT_THROTTLE" value1="48402.0" value2="0.0" value3="46513.0" value4="0.6" name="KSE1" />
+    <set_variable name="nearsScout" value="1.0" />
+  </event>
+  <folder_arme name_arme="Science Vessels" id_arme="8eec58b7-a0c8-44c9-9f8b-90ef07ea003c" expanded_arme="" />
+  <event name_arme="Dyson Transfer" id_arme="299ce3ee-b5c1-4bf1-b025-2c2f6a67b668" parent_id_arme="8eec58b7-a0c8-44c9-9f8b-90ef07ea003c">
+    <if_variable name="dysonRecharge" comparator="EQUALS" value="0.0" />
+    <if_distance name1="Artemis" name2="TSN Dyson" comparator="LESS_EQUAL" value="600.0" />
+    <set_object_property property="energy" value="2000" name="Artemis" />
+    <set_variable name="dysonRecharge" value="1.0" />
+    <incoming_comms_text from="TSN Dyson">Energy transfer complete. Good hunting Artemis.</incoming_comms_text>
+  </event>
+  <event name_arme="Bunson Transfer" id_arme="ddaa25c9-048f-44f4-893a-27c9bef5eacd" parent_id_arme="8eec58b7-a0c8-44c9-9f8b-90ef07ea003c">
+    <if_variable name="bunsonRecharge" comparator="EQUALS" value="0.0" />
+    <if_distance name1="Artemis" name2="TSN Bunson" comparator="LESS_EQUAL" value="600.0" />
+    <set_object_property property="energy" value="2000" name="Artemis" />
+    <set_variable name="bunsonRecharge" value="1.0" />
+    <incoming_comms_text from="TSN Bunson">Energy transfer complete. Thanks for checking in Artemis.</incoming_comms_text>
+  </event>
+  <event name_arme="Near Dyson" id_arme="00360306-e395-4cd3-b533-8fc189288d48" parent_id_arme="8eec58b7-a0c8-44c9-9f8b-90ef07ea003c">
+    <if_variable name="approachedDyson" comparator="EQUALS" value="0.0" />
+    <if_distance name1="Artemis" name2="TSN Dyson" comparator="LESS_EQUAL" value="4000.0" />
+    <set_variable name="approachedDyson" value="1.0" />
+    <incoming_comms_text from="TSN Dyson">Greetings Artemis. Our research has determined that the Tolan nebula is capable of obscuring objects from sensors. Use caution if you enter it. We have some energy reserves if you get within range we'll recharge you.</incoming_comms_text>
+  </event>
+  <event name_arme="Near Bunson" id_arme="d95f2767-8a8c-40bb-8e07-acb51c6d6eba" parent_id_arme="8eec58b7-a0c8-44c9-9f8b-90ef07ea003c">
+    <if_variable name="approachedBunson" comparator="EQUALS" value="0.0" />
+    <if_distance name1="Artemis" name2="TSN Bunson" comparator="LESS_EQUAL" value="4000.0" />
+    <set_variable name="approachedBunson" value="1.0" />
+    <incoming_comms_text from="TSN Bunson">Falicitations Artemis. Scans of the nebula show that subspace transmissions have extreme difficulty clearing the radiation caused by the interstellar gasses. Vessels must clear the nebula to successfully transmit data. It's very fascinating we've actually caught unexplained data from the center of the nebula. If your energy cells need recharging come within transfer range and we'll send you what we can.</incoming_comms_text>
+  </event>
+  <event name_arme="Transmission" id_arme="d8ab7d8e-ddca-4387-9b27-c29ce8779e8c" parent_id_arme="8eec58b7-a0c8-44c9-9f8b-90ef07ea003c">
+    <if_variable name="bunsonMessage" comparator="EQUALS" value="0.0" />
+    <if_variable name="HamilcarIsDead" comparator="EQUALS" value="1.0" />
+    <set_variable name="bunsonMessage" value="1.0" />
+    <incoming_comms_text from="TS% Bu23jlnsn">Artemis, are you s8h2 there? 7h93 detected 7h3 antimatter explosion. bjk1 calling h195g reinforcements.</incoming_comms_text>
   </event>
 </mission_data>
